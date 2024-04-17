@@ -12,6 +12,7 @@ import {
   UsersRound,
   Settings,
   ChevronRight,
+  MapIcon,
 } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -59,6 +60,12 @@ export default function SideNavbar({}: Props) {
             title: "Trash Cans",
             href: "/trash-cans",
             icon: ShoppingCart,
+            variant: "ghost",
+          },
+          {
+            title: "Visual",
+            href: "/visual",
+            icon: MapIcon,
             variant: "ghost",
           },
           {
