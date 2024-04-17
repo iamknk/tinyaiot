@@ -6,7 +6,7 @@ import {
   ResponsiveContainer,
   XAxis,
   YAxis,
-  Bar
+  Bar,
 } from "recharts";
 
 type Props = {};
@@ -14,52 +14,52 @@ type Props = {};
 const data = [
   {
     name: "Jan",
-    total: Math.floor(Math.random() * 5000) + 1000
+    total: 54000,
   },
   {
     name: "Feb",
-    total: Math.floor(Math.random() * 5000) + 1000
+    total: 60000,
   },
   {
     name: "Mar",
-    total: Math.floor(Math.random() * 5000) + 1000
+    total: 62000,
   },
   {
     name: "Apr",
-    total: Math.floor(Math.random() * 5000) + 1000
+    total: 62000,
   },
   {
     name: "May",
-    total: Math.floor(Math.random() * 5000) + 1000
+    total: 78000,
   },
   {
     name: "Jun",
-    total: Math.floor(Math.random() * 5000) + 1000
+    total: 65000,
   },
   {
     name: "Jul",
-    total: Math.floor(Math.random() * 5000) + 1000
+    total: 88000,
   },
   {
     name: "Aug",
-    total: Math.floor(Math.random() * 5000) + 1000
+    total: 90000,
   },
   {
     name: "Sep",
-    total: Math.floor(Math.random() * 5000) + 1000
+    total: 82000,
   },
   {
     name: "Oct",
-    total: Math.floor(Math.random() * 5000) + 1000
+    total: 88000,
   },
   {
     name: "Nov",
-    total: Math.floor(Math.random() * 5000) + 1000
+    total: 88500,
   },
   {
     name: "Dec",
-    total: Math.floor(Math.random() * 5000) + 1000
-  }
+    total: 92000,
+  },
 ];
 
 export default function BarChart({}: Props) {
@@ -78,7 +78,7 @@ export default function BarChart({}: Props) {
           axisLine={false}
           stroke="#888888"
           fontSize={12}
-          tickFormatter={(value) => `$${value}`}
+          tickFormatter={(value) => `${value}`}
         />
         <Bar dataKey={"total"} radius={[4, 4, 0, 0]} />
       </BarGraph>

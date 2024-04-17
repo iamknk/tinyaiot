@@ -15,12 +15,16 @@ import PageTitle from "@/components/PageTitle";
 type Props = {};
 type Payment = {
   name: string;
-  email: string;
-  lastOrder: string;
-  method: string;
+  id: string;
+  assignedtrashcans: string;
 };
 
 const columns: ColumnDef<Payment>[] = [
+  {
+    accessorKey: "id",
+    header: "Employee ID",
+  },
+
   {
     accessorKey: "name",
     header: "Name",
@@ -37,119 +41,97 @@ const columns: ColumnDef<Payment>[] = [
           <p>{row.getValue("name")} </p>
         </div>
       );
-    }
+    },
   },
+
   {
-    accessorKey: "email",
-    header: "Email"
+    accessorKey: "assignedtrashcans",
+    header: "Assigned Trash Cans",
   },
-  {
-    accessorKey: "lastOrder",
-    header: "Last Order"
-  },
-  {
-    accessorKey: "method",
-    header: "Method"
-  }
 ];
 
 const data: Payment[] = [
   {
     name: "John Doe",
-    email: "john@example.com",
-    lastOrder: "2023-01-01",
-    method: "Credit Card"
+    id: "EMP12345",
+    assignedtrashcans: "17",
   },
   {
     name: "Alice Smith",
-    email: "alice@example.com",
-    lastOrder: "2023-02-15",
-    method: "PayPal"
+    id: "EMP23456",
+    assignedtrashcans: "42",
   },
   {
     name: "Bob Johnson",
-    email: "bob@example.com",
-    lastOrder: "2023-03-20",
-    method: "Stripe"
+    id: "EMP34567",
+    assignedtrashcans: "31",
   },
   {
     name: "Emma Brown",
-    email: "emma@example.com",
-    lastOrder: "2023-04-10",
-    method: "Venmo"
+    id: "EMP45678",
+    assignedtrashcans: "29",
   },
   {
     name: "Michael Davis",
-    email: "michael@example.com",
-    lastOrder: "2023-05-05",
-    method: "Cash"
+    id: "EMP56789",
+    assignedtrashcans: "13",
   },
   {
     name: "Sophia Wilson",
-    email: "sophia@example.com",
-    lastOrder: "2023-06-18",
-    method: "Bank Transfer"
+    id: "EMP67890",
+    assignedtrashcans: "58",
   },
   {
     name: "Liam Garcia",
-    email: "liam@example.com",
-    lastOrder: "2023-07-22",
-    method: "Payoneer"
+    id: "EMP78901",
+    assignedtrashcans: "25",
   },
   {
     name: "Olivia Martinez",
-    email: "olivia@example.com",
-    lastOrder: "2023-08-30",
-    method: "Apple Pay"
+    id: "EMP89012",
+    assignedtrashcans: "36",
   },
   {
     name: "Noah Rodriguez",
-    email: "noah@example.com",
-    lastOrder: "2023-09-12",
-    method: "Google Pay"
+    id: "EMP90123",
+    assignedtrashcans: "71",
   },
   {
     name: "Ava Lopez",
-    email: "ava@example.com",
-    lastOrder: "2023-10-25",
-    method: "Cryptocurrency"
+    id: "EMP01234",
+    assignedtrashcans: "19",
   },
   {
     name: "Elijah Hernandez",
-    email: "elijah@example.com",
-    lastOrder: "2023-11-05",
-    method: "Alipay"
+    id: "EMP98765",
+    assignedtrashcans: "63",
   },
   {
     name: "Mia Gonzalez",
-    email: "mia@example.com",
-    lastOrder: "2023-12-08",
-    method: "WeChat Pay"
+    id: "EMP87654",
+    assignedtrashcans: "77",
   },
   {
     name: "James Perez",
-    email: "james@example.com",
-    lastOrder: "2024-01-18",
-    method: "Square Cash"
+    id: "EMP76543",
+    assignedtrashcans: "85",
   },
   {
     name: "Charlotte Carter",
-    email: "charlotte@example.com",
-    lastOrder: "2024-02-22",
-    method: "Zelle"
+    id: "EMP65432",
+    assignedtrashcans: "94",
   },
   {
     name: "Benjamin Taylor",
-    email: "benjamin@example.com",
-    lastOrder: "2024-03-30",
-    method: "Stripe"
-  }
+    id: "EMP54321",
+    assignedtrashcans: "10",
+  },
 ];
 
 export default function UsersPage({}: Props) {
   return (
     <div className="flex flex-col gap-5  w-full">
-      <PageTitle title="Users" />
+      <PageTitle title="Trash Collectors" />
       <DataTable columns={columns} data={data} />
     </div>
   );

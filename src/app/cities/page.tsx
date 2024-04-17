@@ -22,37 +22,37 @@ import { cn } from "@/lib/utils";
 type Props = {};
 
 interface Setting {
-  category: string;
-  value: string | number | boolean;
+  city: string;
+  trashcans: string | number | boolean;
 }
 
 const columns: ColumnDef<Setting>[] = [
   {
-    accessorKey: "category",
-    header: "Category"
+    accessorKey: "city",
+    header: "Cities",
   },
   {
-    accessorKey: "value",
-    header: "Value"
-  }
+    accessorKey: "trashcans",
+    header: "Trash Cans",
+  },
 ];
 const data: Setting[] = [
   {
-    category: "Account",
-    value: true
+    city: "Münster",
+    trashcans: "50",
   },
   {
-    category: "Notifications",
-    value: false
+    city: "Emsdetten",
+    trashcans: "55",
   },
   {
-    category: "Language",
-    value: "English"
+    city: "Berlin",
+    trashcans: "1050",
   },
   {
-    category: "Theme",
-    value: "Dark"
-  }
+    city: "Munich",
+    trashcans: "1000",
+  },
 ];
 
 export default function SettingsPage({}: Props) {

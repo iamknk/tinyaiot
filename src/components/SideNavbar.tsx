@@ -11,7 +11,7 @@ import {
   LayoutDashboard,
   UsersRound,
   Settings,
-  ChevronRight
+  ChevronRight,
 } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -47,26 +47,26 @@ export default function SideNavbar({}: Props) {
             title: "Dashboard",
             href: "/",
             icon: LayoutDashboard,
-            variant: "default"
+            variant: "default",
           },
           {
-            title: "Users",
-            href: "/users",
+            title: "Trash Collectors",
+            href: "/trash-collectors",
             icon: UsersRound,
-            variant: "ghost"
+            variant: "ghost",
           },
           {
-            title: "Ordrs",
-            href: "/orders",
+            title: "Trash Cans",
+            href: "/trash-cans",
             icon: ShoppingCart,
-            variant: "ghost"
+            variant: "ghost",
           },
           {
-            title: "Settings",
-            href: "/settings",
+            title: "Cities",
+            href: "/cities",
             icon: Settings,
-            variant: "ghost"
-          }
+            variant: "ghost",
+          },
         ]}
       />
     </div>
